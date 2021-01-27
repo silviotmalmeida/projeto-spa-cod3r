@@ -7,13 +7,20 @@ const watch = require("gulp-watch");
 
 function servidor(cb) {
   //função que cria o servidor de desenvolvimento
-  return gulp.src("build").pipe(
-    webserver({
-      port: 8080,
-      open: true,
-      livereload: true,
-      host: '0.0.0.0'
-    })
+  return (
+    gulp
+      //definindo a pasta raiz da aplicação
+      .src("build")
+
+      //configurando o servidor
+      .pipe(
+        webserver({
+          port: 8080,
+          open: true,
+          livereload: true,
+          host: "0.0.0.0",
+        })
+      )
   );
 }
 
@@ -26,7 +33,7 @@ function monitorarArquivos(cb) {
   return cb();
 }
 
-//exportando as funções para uso externo
+//exportando as tasks para uso do gulpfile.js
 module.exports = {
   monitorarArquivos,
   servidor,

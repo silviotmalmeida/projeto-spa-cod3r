@@ -9,4 +9,6 @@ O projeto encontra-se dockerizado para facilitar a implantação. As orientaçõ
 
 * Para iniciar a execução utiliza-se o comando "sudo ./startContainers.sh";
 
+* O sistema estará disponível na URL "localhost:8080".
+
 * Para encerrar a execução utiliza-se o comando "sudo ./stopContainers.sh";
