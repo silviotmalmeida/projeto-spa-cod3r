@@ -15,7 +15,7 @@ function servidor(cb) {
       //configurando o servidor
       .pipe(
         webserver({
-          port: 8080,
+          port: 3003,
           open: true,
           livereload: true,
           host: "0.0.0.0",
